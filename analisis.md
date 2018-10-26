@@ -5,14 +5,12 @@ Obtener Data Streaming desde Twitter utilizando Kafka y almacenarlo en una base 
 
 ## Arquitectura
 
-
 ```mermaid
 graph LR
 A[Twitter-Eventes] --> B[kafka -Events Collector]
 B --> C[Spark-Stream Processing]
 C --> D[Mongodb -Almacenamiento]
 D --> E[Python-consultas]
-
 ```
 
 
