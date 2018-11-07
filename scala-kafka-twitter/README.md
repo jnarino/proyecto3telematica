@@ -1,30 +1,35 @@
 
-### Example project to integrate Kafka, Avro and Spark Streaming with Twitter as a stream source 
+### Prueba de concepto big data con data streamming usando Scala, Kafka, Avro y Spark Streaming con Twitter como fuente de streaming
 
-This is WIP.
+#### ¿Cómo correrlo? (linux)
 
-Current infrastructure:
-- Tweets are serialized to Avro (without code generation) and sent to Kafka
-- A Kafka consumer picks up serialized Tweets and prints them to stdout
+1. Instalar Java y configurar la variable de entorno
 
-### How to run
+```
+$ sudo yum install java-1.8.0-openjdk
+```
+Editar /etc/environment en cualquier editor como nano or gedit y agrega la siguiente línea:
+```
+JAVA_HOME=/usr/lib/jvm/open-jdk
+```
+(el java path igual al de la instalación ejemplo /lib/jvm/java-1.8.0-openjdk)
 
-1. Get Twitter credentials and fill them in `reference.conf`.
+Usa el comando source para cargar en la terminal actual la variable configurada:
+```
+source /etc/environment
+```
+2. Instala e inicia Kafka, puedes seguir las instrucciones pasos 1 a 5 de : https://goo.gl/dkvWH8
 
-2. Start Kafka [(instructions)](http://kafka.apache.org/documentation.html#introduction) in single-node mode on localhost
-
-3. Start Kafka producer
+3. Inicia el Kafka producer ejecuntado desde esta carpeta:
 ```
 ./gradlew produce 
 ```
-This will start to read recent tweets, encode them to Avro and send to the Kafka cluster in binary format (`Array[Byte]`). 
+Esto iniciará la lectura de los twetts recientes que cumplen con el filtro de los hashtags o palabras configuradas en el archivo Producer de scala y los llevará al tópico de Kafka en formato binario usando Avro
 
-4. Start Kafka consumer
+4. Inicia el Kafka consumer ejecutando desde esta carpeta:
 ```
  ./gradlew consume
 ```
-This will run Spark streaming connected to the Kafka cluster. In 5-second intervals 
-the program reads Avro tweets from Kafka, deserializes the tweet texts to strings 
-and print 10 most frequent words
+Esto hará que Spark inicie conectándose al tópico de Kafka, decodificando con Avro los mensajes recuperados y mostrará posteriormente las 10 palabras más populares luego del análisis (conteo de palabras usando mapreduce) cada 5 segundos
  
 
