@@ -1,0 +1,62 @@
+products:
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$1.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$2.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$3.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$4.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$5$$anonfun$apply$1.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$$anonfun$5.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp$delayedInit$body.class
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/KafkaConsumerApp.class
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> build/classes/main/net/mkrcah/KafkaProducerApp$$anonfun$main$1.class
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> build/classes/main/net/mkrcah/KafkaProducerApp$.class
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> build/classes/main/net/mkrcah/KafkaProducerApp.class
+   src/main/scala/net/mkrcah/TwitterStream.scala -> build/classes/main/net/mkrcah/TwitterStream$.class
+   src/main/scala/net/mkrcah/TwitterStream.scala -> build/classes/main/net/mkrcah/TwitterStream$OnTweetPosted.class
+   src/main/scala/net/mkrcah/TwitterStream.scala -> build/classes/main/net/mkrcah/TwitterStream.class
+binary dependencies:
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.twitter/bijection-avro_2.10/0.7.2/78fea44144d4e4a9d8cced22c66ccb8c9d4a9ecc/bijection-avro_2.10-0.7.2.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.twitter/bijection-core_2.10/0.7.2/bbe39b6df5dcf6578f66fa49ba3edcfb2beae4b1/bijection-core_2.10-0.7.2.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.10/0.8.0/34577bfeb4d5add4e591888185246926f8f86b4d/kafka_2.10-0.8.0.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.apache.spark/spark-core_2.10/1.2.0/852471a034f22f348ccdc8494c29f4838a0e6d8f/spark-core_2.10-1.2.0.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.apache.spark/spark-streaming-kafka_2.10/1.2.0/bfaa402c3bb7772d6fefa13a2ee827ee569332a5/spark-streaming-kafka_2.10-1.2.0.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.apache.spark/spark-streaming_2.10/1.2.0/513dbb6afe8b5043db3b283fb67e274c35718455/spark-streaming_2.10-1.2.0.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.4/9aae4cb1802537d604e03688cab744ff47b31a7d/scala-library-2.10.4.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64/jre/lib/rt.jar
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> build/classes/main/net/mkrcah/avro/Tweet.class
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.twitter/bijection-avro_2.10/0.7.2/78fea44144d4e4a9d8cced22c66ccb8c9d4a9ecc/bijection-avro_2.10-0.7.2.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.twitter/bijection-core_2.10/0.7.2/bbe39b6df5dcf6578f66fa49ba3edcfb2beae4b1/bijection-core_2.10-0.7.2.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.10/0.8.0/34577bfeb4d5add4e591888185246926f8f86b4d/kafka_2.10-0.8.0.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.4/9aae4cb1802537d604e03688cab744ff47b31a7d/scala-library-2.10.4.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/4.0.2/6555e7c45f5db0006823731b2ddb536d481e11d1/twitter4j-core-4.0.2.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-stream/4.0.2/c8ba9a8013b7e1d01a4ee9066d681a228bbb05/twitter4j-stream-4.0.2.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64/jre/lib/rt.jar
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> build/classes/main/net/mkrcah/avro/Tweet.class
+   src/main/scala/net/mkrcah/TwitterStream.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.2.1/f771f71fdae3df231bcd54d5ca2d57f0bf93f467/config-1.2.1.jar
+   src/main/scala/net/mkrcah/TwitterStream.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.4/9aae4cb1802537d604e03688cab744ff47b31a7d/scala-library-2.10.4.jar
+   src/main/scala/net/mkrcah/TwitterStream.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/4.0.2/6555e7c45f5db0006823731b2ddb536d481e11d1/twitter4j-core-4.0.2.jar
+   src/main/scala/net/mkrcah/TwitterStream.scala -> /home/kafka/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-stream/4.0.2/c8ba9a8013b7e1d01a4ee9066d681a228bbb05/twitter4j-stream-4.0.2.jar
+   src/main/scala/net/mkrcah/TwitterStream.scala -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64/jre/lib/rt.jar
+source dependencies:
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> src/main/scala/net/mkrcah/KafkaProducerApp.scala
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> src/main/scala/net/mkrcah/TwitterStream.scala
+external dependencies:
+
+class names:
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$1
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$2
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$3
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$4
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$5
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$$anonfun$5$$anonfun$apply$1
+   src/main/scala/net/mkrcah/KafkaConsumerApp.scala -> net.mkrcah.KafkaConsumerApp$delayedInit$body
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> net.mkrcah.KafkaProducerApp
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> net.mkrcah.KafkaProducerApp$
+   src/main/scala/net/mkrcah/KafkaProducerApp.scala -> net.mkrcah.KafkaProducerApp$$anonfun$main$1
+   src/main/scala/net/mkrcah/TwitterStream.scala -> net.mkrcah.TwitterStream
+   src/main/scala/net/mkrcah/TwitterStream.scala -> net.mkrcah.TwitterStream$
+   src/main/scala/net/mkrcah/TwitterStream.scala -> net.mkrcah.TwitterStream$OnTweetPosted
