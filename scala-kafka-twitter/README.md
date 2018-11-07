@@ -14,7 +14,7 @@ JAVA_HOME=/usr/lib/jvm/open-jdk
 ```
 (el java path igual al de la instalación ejemplo /lib/jvm/java-1.8.0-openjdk)
 
-Usa e comando source para cargar en la terminal actual la variable configurada:
+Usa el comando source para cargar en la terminal actual la variable configurada:
 ```
 source /etc/environment
 ```
