@@ -10,7 +10,7 @@ $ sudo yum install java-1.8.0-openjdk
 ```
 Editar /etc/environment en cualquier editor como nano or gedit y agrega la siguiente línea:
 ```
-JAVA_HOME="/usr/lib/jvm/open-jdk"
+JAVA_HOME=/usr/lib/jvm/open-jdk
 ```
 (el java path igual al de la instalación ejemplo /lib/jvm/java-1.8.0-openjdk)
 
