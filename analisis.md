@@ -1,41 +1,46 @@
 # Informe Proyecto 3
 
-Obtener Data Streaming desde Twitter utilizando Kafka y almacenarlo en una base de datos mongo para luego realizar consultas de la información recolectada
+## Problema a resolver
 
+La aplicación realiza un word count de textos emitidos sobre una temática (hashtag o palabra) en tiempo real de la aplicación twitter, la intención es conocer la popularidad de las diferentes palabras en lapsos de 5 segundos
 
-## Arquitectura
+## Arquitectura de datos (ciclo de vida, almacenamiento, procesamiento)
 
-```mermaid
-graph LR
-A[Twitter-Eventes] --> B[kafka -Events Collector]
-B --> C[Spark-Stream Processing]
-C --> D[Mongodb -Almacenamiento]
-D --> E[Python-consultas]
+Diseño arquitectura aplicación: https://goo.gl/vMbwWk
+
+Los datos son recuperados y serializados para una mayor eficiencia por el algoritmo en cuestión
+
+## Fuentes y naturaleza de los datos + tecnologías a utilizar
+
+Los tweets son el elemento básico de todo lo que conforma Twitter. Los tweets también se conocen como "actualizaciones de estado". El objeto Tweet tiene una larga lista de atributos de "root-level", incluyendo atributos fundamentales como id, created_at y text. Los objetos de tweet también son el objeto "padre" de varios objetos hijos. Los objetos secundarios de Tweet incluyen usuario, entidades y entidades extendidas. Los tweets que están etiquetados geográficamente tendrán un objeto secundario de lugar ".
+
+El JSON de twitter tiene los siguiente atributos y los elementos hijos estan dados por { }
+```javascript
+{
+ "created_at":"Thu Apr 06 15:24:15 +0000 2017",
+ "id": 850006245121695744,
+ "id_str": "850006245121695744",
+ "text": "1/ Today we’re sharing our vision for the future of the Twitter API platform!nhttps://t.co/XweGngmxlP",
+ "user": {},  
+ "entities": {}
+}
 ```
+## Sistema de ingesta de datos + tecnologías a utilizar
 
+Programa que sirve como controlador entre los datos emitidos en twitter y el pipeline de datos de kafka que será un productor-consumidor de contenidos.
 
-## Fuente y Naturaleza de los Datos
+El productor pública la información en tópico elegido. El productor es responsable de elegir qué registro se asigna a que partición dentro del tópico.
 
-"Tweets are the basic atomic building block of all things Twitter. Tweets are also known as “status updates.” The Tweet object has a long list of ‘root-level’ attributes, including fundamental attributes such as id, created_at, and text. Tweet objects are also the ‘parent’ object to several child objects. Tweet child objects include user, entities, and extended_entities. Tweets that are geo-tagged will have a place child object."
+El consumidor recupera cada registro publicado bajo un tópico suscrito y se entregan a una instancia del consumidor.
 
-## Sistema de ingesta de datos
+Los datos obtenidos de twitter mediante una aplicación en el lenguaje scala, son serializados con la ayuda del framework Avro y puestos en una cola/tópico de Apache Kafka
 
-A topic is a category or feed name to which records are published. Topics in Kafka are always multi-subscriber; that is, a topic can have zero, one, or many consumers that subscribe to the data written to it.
+## Almacenamiento de los datos + tecnologías a utilizar
 
-For each topic, the Kafka cluster maintains a partitioned log
+Kafka persiste la información en disco la cual se define en una política de almacenamiento de datos dentro de un log por un tiempo definido.  La información se sigue publicando esté o no siendo consumida.
 
- bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic bigdata.
+## Análisis de datos + tecnologías a utilizar
 
-Producers
-Producers publish data to the topics of their choice. The producer is responsible for choosing which record to assign to which partition within the topic. This can be done in a round-robin fashion simply to balance load or it can be done according to some semantic partition function (say based on some key in the record). More on the use of partitioning in a second!
+En el consumer usa spark al cual se le asigna a un tópico y hace un streaming de la info en memoria decodificando con Avro para luego hacer una implementación de un wordcount con mapreduce.
 
-Consumers
-Consumers label themselves with a consumer group name, and each record published to a topic is delivered to one consumer instance within each subscribing consumer group. Consumer instances can be in separate processes or on separate machines.
-
-## Almacenamiento de los datos
-
-spark +mongo
-
-## Análisis de datos
-
-consultas a mongo a través de python
+El resultado es mostrado en consola cada 5 segundos.
